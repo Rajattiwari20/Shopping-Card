@@ -5,9 +5,9 @@ import HomeHeader from './HomeHeader'
 import ItemCard from './ItemCard'
 
 const Items = (props) => {
-  useEffect(() => {
-    props.dispatch(fetchItems())
-  }, [])
+  // useEffect(() => {
+  //   props.dispatch(fetchItems())
+  // }, [])
   const items = props.items
   return (
     <>

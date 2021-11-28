@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { addToCart, increaseItemQty } from '../../redux/actions'
+import { addToCart } from '../../redux/actions'
 
 const ItemCard = (props) => {
   const { item } = props
@@ -14,7 +14,7 @@ const ItemCard = (props) => {
       image: item.image,
       id: item.id,
       price: item.price,
-      // quantity: item.quantity,
+      quantity: item.quantity,
     }
     props.dispatch(addToCart(cartPayload, item.price))
     setShowButton(false)

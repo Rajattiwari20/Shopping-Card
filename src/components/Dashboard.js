@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './Header'
-import Home from './Home/Home'
+// import Home from './Home/Home'
 import Setting from './Setting/Setting'
 import Profile from './Profile/Profile'
 import Footer from './Footer'
 import Items from './Home/Items'
 import Cart from './Home/Cart'
-const Dashboard = () => {
+import { fetchItems } from '../redux/actions'
+const Dashboard = (props) => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchItems())
+  }, [])
   return (
     <>
       <Router>

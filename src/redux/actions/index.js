@@ -3,6 +3,7 @@ export const GET_ITEMS = 'GET_ITEMS'
 export const GET_CART_ITEMS = 'GET_CART_ITEMS'
 export const Add_TO_CART = 'Add_TO_CART'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
+export const SET_BUDGET = 'SET_BUDGET'
 // export const INCREASE_QTY = 'INCREASE_QTY'
 
 //action creators
@@ -33,6 +34,13 @@ export function removeFromCart(id, price) {
     type: REMOVE_FROM_CART,
     id,
     price,
+  }
+}
+
+export function getBudget(budgetPrice) {
+  return {
+    type: SET_BUDGET,
+    budgetPrice,
   }
 }
 
