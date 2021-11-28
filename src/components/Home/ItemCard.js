@@ -1,8 +1,12 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { addToCart } from '../../redux/actions'
 
 const ItemCard = (props) => {
-  console.log('Props Item card =>', props.item)
   const { item } = props
+  const handleAdd = (item) => {
+    props.dispatch(addToCart(item))
+  }
   return (
     <>
       <h3>{`Id : ${item.id}`}</h3>
@@ -11,8 +15,13 @@ const ItemCard = (props) => {
       <h3>{`Description : ${item.description}`}</h3>
       <h3>{`Rating : ${item.rating.rate}`}</h3>
       <h3>{`Price : ${item.price}`}</h3>
+      <button onClick={() => handleAdd(item)}>Add to Cart</button>
     </>
   )
 }
-
-export default ItemCard
+function mapStateToProps(state) {
+  return {
+    cart: state.cart,
+  }
+}
+export default connect(mapStateToProps)(ItemCard)
