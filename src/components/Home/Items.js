@@ -9,7 +9,6 @@ const Items = (props) => {
     props.dispatch(fetchItems())
   }, [])
   const items = props.items
-  // console.log('Items => ', items)
   return (
     <>
       <HomeHeader />

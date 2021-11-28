@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { fetchCart } from '../../redux/actions'
+// import { fetchCart } from '../../redux/actions'
 import HomeHeader from './HomeHeader'
 import CartCard from './CartCard'
 const Cart = (props) => {
-  useEffect(() => {
-    // props.dispatch(fetchCart())
-  }, [])
+  // useEffect(() => {
+  //   props.dispatch(fetchCart())
+  // }, [])
   const cart = props.cart
   const { totalPrice } = props.cart
+  console.log('Cart =>', cart)
   return (
     <>
       <HomeHeader />

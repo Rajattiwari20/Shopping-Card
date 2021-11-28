@@ -2,6 +2,8 @@
 export const GET_ITEMS = 'GET_ITEMS'
 export const GET_CART_ITEMS = 'GET_CART_ITEMS'
 export const Add_TO_CART = 'Add_TO_CART'
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
+// export const INCREASE_QTY = 'INCREASE_QTY'
 
 //action creators
 export function getItems(items) {
@@ -18,13 +20,25 @@ export function getCartItems(cart) {
   }
 }
 
-export function addToCart(itemAdded, price) {
+export function addToCart(cartPayload, price) {
   return {
     type: Add_TO_CART,
-    itemAdded,
+    cartPayload,
     price,
   }
 }
+
+export function removeFromCart(id, price) {
+  return {
+    type: REMOVE_FROM_CART,
+    id,
+    price,
+  }
+}
+
+// export function increaseItemQty(price, cartPayload) {
+//   return { type: INCREASE_QTY, price, cartPayload }
+// }
 
 //using redux thunk to make api call (redux thunk helps us with dispatch function)
 

@@ -6,7 +6,7 @@ const HomeHeader = (props) => {
   const { totalItem } = props.cart
   return (
     <>
-      <Link to="/items">Items</Link>
+      <Link to="/">Items</Link>
       <Link to="/cart">{`Cart ${totalItem}`}</Link>
     </>
   )

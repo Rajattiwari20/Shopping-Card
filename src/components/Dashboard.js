@@ -14,11 +14,10 @@ const Dashboard = () => {
         <Header />
         <div className="container">
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Items />} />
             <Route exact path="/setting" element={<Setting />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/items" element={<Items />} />
           </Routes>
         </div>
         <Footer />
