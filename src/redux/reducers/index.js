@@ -4,9 +4,8 @@ const initialItemsState = []
 export function itemsReducer(state = initialItemsState, actions) {
   switch (actions.type) {
     case GET_ITEMS:
-      return {
-        items: actions.items,
-      }
+      return actions.items
+
     default:
       return state
   }

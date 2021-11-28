@@ -1,16 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { fetchItems } from '../../redux/actions'
 import HomeHeader from './HomeHeader'
+import ItemCard from './ItemCard'
 
 const Items = (props) => {
-  console.log('Items props =>', props)
   useEffect(() => {
     props.dispatch(fetchItems())
   }, [])
+  const items = props.items
+  console.log('Items => ', items)
   return (
     <>
       <HomeHeader />
+      {items &&
+        items.map((item, index) => <ItemCard item={item} key={index} />)}
     </>
   )
 }
