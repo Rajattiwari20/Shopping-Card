@@ -5,7 +5,7 @@ import { addToCart } from '../../redux/actions'
 const ItemCard = (props) => {
   const { item } = props
   const handleAdd = (item) => {
-    props.dispatch(addToCart(item))
+    props.dispatch(addToCart(item, item.price))
   }
   return (
     <>

@@ -18,10 +18,11 @@ export function getCartItems(cart) {
   }
 }
 
-export function addToCart(itemAdded) {
+export function addToCart(itemAdded, price) {
   return {
     type: Add_TO_CART,
     itemAdded,
+    price,
   }
 }
 

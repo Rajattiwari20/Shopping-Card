@@ -27,9 +27,11 @@ export function cartReducer(state = initialCartState, actions) {
       return actions.cart
     case Add_TO_CART:
       // console.log('reducer =>', state)
+
       return {
         cardArray: [actions.itemAdded, ...state.cardArray],
         totalItem: state.totalItem + 1,
+        totalPrice: state.totalPrice + actions.price,
       }
     default:
       return state

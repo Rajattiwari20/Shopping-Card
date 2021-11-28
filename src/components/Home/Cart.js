@@ -8,13 +8,11 @@ const Cart = (props) => {
     // props.dispatch(fetchCart())
   }, [])
   const cart = props.cart
-  console.log('Cart =>', cart)
-  const [total, setTotal] = useState(0)
-  console.log('Cart => ', cart)
+  const { totalPrice } = props.cart
   return (
     <>
       <HomeHeader />
-      <h1>{`Total : ${total}`}</h1>
+      <h1>{`Total : ${totalPrice}`}</h1>
       {cart.cardArray &&
         cart.cardArray.map((cartItem, index) => (
           <CartCard cartItem={cartItem} key={index} />
