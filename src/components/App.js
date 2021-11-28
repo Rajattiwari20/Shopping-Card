@@ -1,5 +1,10 @@
+import Dashboard from './Dashboard'
 function App() {
-  return <>Hey</>
+  return (
+    <>
+      <Dashboard />
+    </>
+  )
 }
 
 export default App
