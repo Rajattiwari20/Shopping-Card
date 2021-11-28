@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux'
-
+import { GET_ITEMS } from '../actions'
 const initialItemsState = []
 export function itemsReducer(state = initialItemsState, actions) {
   switch (actions.type) {
+    case GET_ITEMS:
+      return {
+        items: actions.items,
+      }
     default:
       return state
   }
