@@ -6,9 +6,9 @@ import { Grid } from '@mui/material'
 const CartCard = (props) => {
   const { title, image } = props.cartItem
   const { cartItem } = props
-  // console.log('cartItem ==>', cartItem)
   const handleRemove = (cartItem) => {
     props.dispatch(removeFromCart(cartItem.id, cartItem.price))
+    alert('Item Removed from Cart')
   }
 
   return (

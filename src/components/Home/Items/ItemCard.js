@@ -5,26 +5,19 @@ import { Grid } from '@mui/material'
 
 const ItemCard = (props) => {
   const { item } = props
-  // const [quantity, setQuantity] = useState(0)
-  // item.quantity = quantity
   const [showButton, setShowButton] = useState(true)
   const handleAdd = (item) => {
-    // setQuantity(quantity + 1)
     const cartPayload = {
       title: item.title,
       image: item.image,
       id: item.id,
       price: item.price,
-      // quantity: item.quantity,
     }
     props.dispatch(addToCart(cartPayload, item.price))
     setShowButton(false)
+    alert('Item Added to Cart')
   }
 
-  // const increaseQuantity = (item) => {
-  //   setQuantity(quantity + 1)
-  //   props.dispatch(increaseItemQty(item.price))
-  // }
   return (
     <>
       <Grid container justifyContent="center">

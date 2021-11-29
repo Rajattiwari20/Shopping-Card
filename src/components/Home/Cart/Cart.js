@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-// import { fetchCart } from '../../redux/actions'
+// import { fetchCart } from '../../../redux/actions'
 import HomeHeader from '../HomeHeader'
 import CartCard from '../Cart/CartCard'
 const Cart = (props) => {

@@ -5,7 +5,6 @@ import {
   Add_TO_CART,
   REMOVE_FROM_CART,
   SET_BUDGET,
-  INCREASE_QTY,
 } from '../actions'
 const initialItemsState = []
 export function itemsReducer(state = initialItemsState, actions) {
@@ -46,19 +45,12 @@ export function cartReducer(state = initialCartState, actions) {
       const filteredArray = state.cardArray.filter(
         (item) => item.id != actions.id,
       )
-      console.log('filteredArray ==>', filteredArray)
+      // console.log('filteredArray ==>', filteredArray)
       return {
         cardArray: filteredArray,
         totalItem: state.totalItem - 1,
         totalPrice: state.totalPrice - actions.price,
       }
-
-    // case INCREASE_QTY:
-    //   return {
-    //     // cardArray: [actions.cartPayload, ...state.cardArray],
-    //     totalItem: state.totalItem + 1,
-    //     totalPrice: state.totalPrice + actions.price,
-    //   }
 
     default:
       return state
