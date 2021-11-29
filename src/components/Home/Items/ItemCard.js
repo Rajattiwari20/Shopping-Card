@@ -62,14 +62,6 @@ const ItemCard = (props) => {
           </Grid>
         </Grid>
       </Grid>
-
-      {/* {item.quantity === 0 ? (
-        <button onClick={() => handleAdd(item)}>Add to Cart</button>
-      ) : (
-        <button onClick={() => increaseQuantity(item)}>
-          {`Increase Quantity ${quantity}`}
-        </button>
-      )} */}
     </>
   )
 }

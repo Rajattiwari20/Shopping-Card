@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 // import { fetchCart } from '../../../redux/actions'
 import HomeHeader from '../HomeHeader'
 import CartCard from '../Cart/CartCard'
+
 const Cart = (props) => {
   // useEffect(() => {
   //   props.dispatch(fetchCart())
   // }, [])
   const cart = props.cart
   const { totalPrice } = props.cart
-  console.log('Cart =>', cart)
   return (
     <>
       <HomeHeader />

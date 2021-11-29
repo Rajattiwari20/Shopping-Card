@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Paper, Grid, TextField, Button } from '@mui/material'
 import { connect } from 'react-redux'
 import { getBudget } from '../../redux/actions'
-
+import DropDown from '../Home/Items/DropDown'
 const Setting = (props) => {
   const [budget, setBudget] = useState(0)
 
@@ -23,6 +23,10 @@ const Setting = (props) => {
             md={12}
             style={{ minHeight: '50vh', marginTop: '100px', marginLeft: '30%' }}
           >
+            <Grid item>
+              <h1 style={{ color: '#5474ab' }}>Please set your Category</h1>
+            </Grid>
+            <DropDown />
             <Grid container direction="column" spacing={2}>
               <Grid item>
                 <h1 style={{ color: '#5474ab' }}>Please set your Budget</h1>

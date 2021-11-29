@@ -5,6 +5,7 @@ import {
   Add_TO_CART,
   REMOVE_FROM_CART,
   SET_BUDGET,
+  SET_CATEGORY,
 } from '../actions'
 const initialItemsState = []
 export function itemsReducer(state = initialItemsState, actions) {
@@ -16,9 +17,16 @@ export function itemsReducer(state = initialItemsState, actions) {
       const budgetProducts = state.filter(
         (item) => item.price <= actions.budgetPrice,
       )
-      console.log('budgetProducts', budgetProducts)
+      // console.log('budgetProducts', budgetProducts)
       return budgetProducts
 
+    case SET_CATEGORY:
+      const categoryArray = state.filter(
+        (item) => item.category == actions.category,
+      )
+      console.log('actions.category ==>', actions.category)
+      console.log('categoryArray', categoryArray)
+      return categoryArray
     default:
       return state
   }

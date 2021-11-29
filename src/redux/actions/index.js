@@ -4,6 +4,7 @@ export const GET_CART_ITEMS = 'GET_CART_ITEMS'
 export const Add_TO_CART = 'Add_TO_CART'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const SET_BUDGET = 'SET_BUDGET'
+export const SET_CATEGORY = 'SET_CATEGORY'
 
 //action creators
 export function getItems(items) {
@@ -40,6 +41,13 @@ export function getBudget(budgetPrice) {
   return {
     type: SET_BUDGET,
     budgetPrice,
+  }
+}
+
+export function getCategory(category) {
+  return {
+    type: SET_CATEGORY,
+    category,
   }
 }
 
