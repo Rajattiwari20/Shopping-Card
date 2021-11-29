@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './Header'
 import Setting from './Setting/Setting'
 import Profile from './Profile/Profile'
@@ -18,6 +18,7 @@ const Dashboard = (props) => {
         <Header />
         <div className="container">
           <Routes>
+            <Route exact path="/Shopping-Card" element={<Items />} />
             <Route exact path="/" element={<Items />} />
             <Route exact path="/setting" element={<Setting />} />
             <Route exact path="/profile" element={<Profile />} />

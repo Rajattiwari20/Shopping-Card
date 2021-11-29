@@ -51,7 +51,7 @@ export function fetchItems() {
     fetch(url)
       .then((response) => response.json())
       .then((item) => {
-        // console.log('Items =>', item)
+        console.log('Items =>', item)
         dispatch(getItems(item))
       })
   }
@@ -63,7 +63,7 @@ export function fetchCart() {
     fetch(url)
       .then((response) => response.json())
       .then((item) => {
-        console.log('Items =>', item)
+        console.log('Cart Item =>', item)
         dispatch(getCartItems(item))
       })
   }
