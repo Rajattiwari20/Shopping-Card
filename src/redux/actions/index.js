@@ -44,8 +44,11 @@ export function getBudget(budgetPrice) {
   }
 }
 
-// export function increaseItemQty(price, cartPayload) {
-//   return { type: INCREASE_QTY, price, cartPayload }
+// export function increaseItemQty(price) {
+//   return {
+//     type: INCREASE_QTY,
+//     price,
+//   }
 // }
 
 //using redux thunk to make api call (redux thunk helps us with dispatch function)

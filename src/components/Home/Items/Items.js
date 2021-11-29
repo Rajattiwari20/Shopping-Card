@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { fetchItems } from '../../redux/actions'
-import HomeHeader from './HomeHeader'
+import HomeHeader from '../HomeHeader'
 import ItemCard from './ItemCard'
-
 const Items = (props) => {
-  // useEffect(() => {
-  //   props.dispatch(fetchItems())
-  // }, [])
   const items = props.items
   return (
     <>

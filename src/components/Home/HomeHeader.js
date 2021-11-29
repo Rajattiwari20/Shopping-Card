@@ -1,13 +1,30 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { Grid } from '@mui/material'
 
 const HomeHeader = (props) => {
   const { totalItem } = props.cart
   return (
     <>
-      <Link to="/">Items</Link>
-      <Link to="/cart">{`Cart ${totalItem}`}</Link>
+      <Grid container justifyContent="center">
+        <Grid item md={6} xm={6} sm={3}>
+          <Grid
+            container
+            justifyContent="space-around"
+            className="home-header-inner-container"
+          >
+            <Grid item className="item">
+              <Link to="/" className="link">
+                Items
+              </Link>
+            </Grid>
+            <Grid item className="item">
+              <Link to="/cart" className="link">{`Cart ${totalItem}`}</Link>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </>
   )
 }
